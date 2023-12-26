@@ -13,16 +13,18 @@ android {
     defaultConfig {
         applicationId = "com.example.kmtestdiza"
         minSdk = 19
+        multiDexEnabled = true
         targetSdk = 31
         versionCode = 1
         versionName = "1.0"
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -53,9 +55,4 @@ dependencies {
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
     implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-
-
-
-
-
 }
